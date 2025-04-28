@@ -1,35 +1,37 @@
-# appointments.py - Appointment Scheduling Feature
+# appointments.py - Appointment Scheduling Feature  
 
 
 
-class Appointment:
+class Appointment:  
 
-    def __init__(self, patient_name, doctor_name, date, time, location):
+    def __init__(self, patient_name, doctor_name, date, time, city, state):  
 
-        self.patient_name = patient_name
+        self.patient_name = patient_name  
 
-        self.doctor_name = doctor_name
+        self.doctor_name = doctor_name  
 
-        self.date = date
+        self.date = date  
 
-        self.time = time
+        self.time = time  
 
-        self.location = location
+        self.city = city  
 
-
-
-
-
-    def schedule(self):
-
-        return f"Appointment scheduled for {self.patient_name} with Dr. {self.doctor_name} on {self.date} at {self.time}."
+        self.state = state  
 
 
 
-# Sample usage
+    def schedule(self):  
 
-if __name__ == "__main__":
+        return (f"Appointment scheduled for {self.patient_name} with Dr. {self.doctor_name} "  
 
-    appointment1 = Appointment("John Doe", "Smith", "2024-07-15", "10:30 AM")
+                f"on {self.date} at {self.time} in {self.city}, {self.state}.")  
 
-    print(appointment1.schedule())
+
+
+# Sample usage  
+
+if __name__ == "__main__":  
+
+    appointment1 = Appointment("John Doe", "Smith", "2024-07-15", "10:30 AM", "New York", "NY")  
+
+    print(appointment1.schedule())  
